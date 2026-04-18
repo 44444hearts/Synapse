@@ -5,7 +5,7 @@ import videoIcon from "./assets/icons/videos.png";
 import settingsIcon from "./assets/icons/settings.png";
 import './App.css';
 
-const API = "http://localhost:8000";
+const API = "https://44444hearts-synapse.hf.space";
 
 // Helpers
 const photoUrl   = (fn) => fn ? `${API}/static/photos/${fn}` : null;
