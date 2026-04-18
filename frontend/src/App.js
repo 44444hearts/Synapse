@@ -1794,7 +1794,7 @@ const TABS = [
           {tab !== "home" && (
             <div style={{ fontSize:14, color:"var(--muted)", fontWeight:500 }}>
               {tab === "people" && `${people.filter(p => !p.is_user).length} people`}
-              {tab === "settings" && "v2.3.0"}
+              {tab === "settings" && "v0.1.0"}
             </div>
           )}
         </div>
