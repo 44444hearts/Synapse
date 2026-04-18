@@ -387,17 +387,7 @@ function PersonModal({ person, people, onClose, onUpdated }) {
   );
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// ── Face Confirm Modal ────────────────────────────────────────────────────────
-//
-// Key UX improvements:
-//  • "Not a face" button is surfaced prominently alongside "Skip" — not buried.
-//  • A helper note explains what to do when an animal/food is shown.
-//  • The face image is labelled "Detected face" to set expectations clearly.
-//  • Batch-dismiss option appears when there are multiple pending detections,
-//    letting users clear all remaining items without tapping through each one.
-// ─────────────────────────────────────────────────────────────────────────────
-
+// Face Confirm Modal
 function FaceConfirmModal({ pendingFaces, people, onConfirm, onDismiss, onClose }) {
   const [current, setCurrent] = useState(0);
   const face = pendingFaces[current];
@@ -628,20 +618,6 @@ function ImportModal({ onClose, onImportDone }) {
               <div style={{ fontSize:48, marginBottom:12 }}>📷</div>
               <div style={{ fontSize:16, fontWeight:600, marginBottom:4 }}>Tap to select photos</div>
               <div style={{ fontSize:13, color:"var(--muted)" }}>Supports JPEG, PNG, HEIC</div>
-            </div>
-            <div style={{ marginTop:20, padding:16, background:"var(--parchment)", borderRadius:14 }}>
-              <div style={{ fontSize:13, fontWeight:600, marginBottom:8 }}>What happens when you import:</div>
-              {[
-                "Faces are detected and matched to known people",
-                "Unknown faces are flagged for you to name",
-                "Non-face detections (pets, food) can be dismissed instantly",
-                "Photos are grouped into albums by visual similarity via CLIP",
-              ].map((t, i) => (
-                <div key={i} style={{ display:"flex", gap:8, alignItems:"flex-start", marginBottom:6 }}>
-                  <span style={{ fontSize:14 }}>✦</span>
-                  <span style={{ fontSize:13, color:"var(--muted)" }}>{t}</span>
-                </div>
-              ))}
             </div>
           </>
         )}
