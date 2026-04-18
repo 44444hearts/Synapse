@@ -112,10 +112,6 @@ function Loader() {
 
 // Displays photo labelled with people inside
 function PhotoModal({ photo, people, onClose }) {
-  const tags = (photo.people || [])
-    .map(id => people.find(p => p.id === id))
-    .filter(Boolean);
-
   const imgSrc = photoUrl(photo.filename);
   const dateDisplay = photo.formatted_date || photo.taken_at || "";
 
@@ -916,10 +912,6 @@ function SharedPhotosModal({ selectedNodes, people, onClose, onPhotoTap }) {
             {photos.map(p => {
               const src = photoUrl(p.filename);
               const dateDisplay = p.formatted_date || p.taken_at || "";
-              const taggedPeople = (p.people || [])
-                .map(id => people.find(pe => pe.id === id))
-                .filter(Boolean)
-                .map(pe => pe.name);
               return (
                 <div key={p.id} style={{ display:"flex", flexDirection:"column", gap:4 }}>
                   <div className="memory-thumb" onClick={() => onPhotoTap(p)}
