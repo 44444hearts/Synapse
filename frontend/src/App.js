@@ -612,12 +612,10 @@ function ImportModal({ onClose, onImportDone }) {
         {step === "select" && (
           <>
             <div className="modal-title">Import Photos</div>
-            <div className="modal-sub">Select photos from your device to import and organise.</div>
             <div className="upload-zone" onClick={() => fileRef.current?.click()}>
               <input ref={fileRef} type="file" accept="image/*" multiple onChange={e => handleFiles(e.target.files)} />
               <div style={{ fontSize:48, marginBottom:12 }}>📷</div>
               <div style={{ fontSize:16, fontWeight:600, marginBottom:4 }}>Tap to select photos</div>
-              <div style={{ fontSize:13, color:"var(--muted)" }}>Supports JPEG, PNG, HEIC</div>
             </div>
           </>
         )}
