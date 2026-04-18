@@ -1,4 +1,4 @@
-const API = "http://localhost:8000";
+const API = "https://44444hearts-synapse.hf.space";
 
 // Core fetch helpers
 async function get(url) {
