@@ -16,8 +16,6 @@ from PIL.ExifTags import TAGS
 from pydantic import BaseModel
 from fastapi.staticfiles import StaticFiles
 
-
-
 # DeepFace
 try:
     from deepface import DeepFace
